@@ -1,9 +1,6 @@
 package com.cmcc.syw;
 
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by sunyiwei on 16/4/13.
@@ -43,5 +40,15 @@ public class Utils {
 
         System.out.format("Accessing %s list %d times takes %#.2f seconds. %n", name, count,
                 ((double) System.currentTimeMillis() - current) / 1000.);
+    }
+
+    public static Map<String, String> randMap(int count) {
+        Map<String, String> map = new HashMap<String, String>();
+
+        for (int i = 0; i < count; i++) {
+            map.put(randStr(10), randStr(10));
+        }
+
+        return map;
     }
 }
