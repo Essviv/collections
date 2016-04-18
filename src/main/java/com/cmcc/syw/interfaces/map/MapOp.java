@@ -1,5 +1,6 @@
 package com.cmcc.syw.interfaces.map;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -25,5 +26,10 @@ public class MapOp {
         for (Map.Entry entry : entrys) {
             System.out.format("%s: %s. %n", entry.getKey(), entry.getValue());
         }
+
+        map = new HashMap<String, String>();
+        map.put("name", null);
+        map.put(null, "good");
+        System.out.println(map);
     }
 }
